@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <link rel="shortcut icon" href="https://static.tildacdn.com/tild6664-3131-4436-b939-386133386463/ico.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>NESTRO CHALLENGE 2023 Dashboard</title>
+
+    <!-- Montserrat Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../static/css/styles.css">
+  </head>
+  <div class="bg-pattern">
+    <img src="https://static.tildacdn.com/tild3866-3336-4539-b138-376165373735/Group_4.svg" alt="Background Pattern">
+  </div>
+  <body>
+    <div class="grid-container">
+
+      <!-- Header -->
+      <header class="header">
+        <div class="menu-icon" onclick="openSidebar()">
+          <span class="material-icons-outlined"></span> 
+        </div>
+        
+        <img src="https://static.tildacdn.com/tild3232-3066-4465-b261-616630313639/logo_landscape.svg" class="logo" alt="Logo">
+        
+        <div class="header-right">
+        </div>
+      </header>
+      <!-- End Header -->
+      
+      <!-- Main -->
+      <main class="main-container">
+
+        <div class="main-title" style="margin-top: 50px;">
+          <p class="font-weight-bold" style="font-size: 32px;"><b>DASHBOARD</b></p>
+        </div>
+
+      <div class="main-title">
+        <span class="font-weight-bold" style="font-size: 32px; white-space: nowrap;" ><b>Введите данные: </b></span>
+      </div>
+      <form method="post">
+        <div class="main-cards">
+
+        <div class="cardd">
+  <div class="card-inner">
+    <p class="text-primary"><b>Выберите название трубы</b></p>
+    <img class="img" src="../static/pipeline.png" alt="Труба" style="width: 48px; height: 48px; margin-right: -5px;">
+  </div>
+
+  <select class="input" id="pipeline-input" name="pipeline-input">
+    <option value="">Выберите название трубы: </option>
+    <option value="B5-J1">B5-J1</option>
+    <option value="C3/E-C2/E">C3/E-C2/E</option>
+    <option value="Y2-G8">Y2-G8</option>
+    <option value="C3/E-X4">C3/E-X4</option>
+    <option value="B3-J2">B3-J2</option>
+    <option value="J1-K-X6">J1-K-X6</option>
+    <option value="J1-K-X3">J1-K-X3</option>
+    <option value="D16-D14">D16-D14</option>
+    <option value="D8-D4">D8-D4</option>
+    <option value="D21-K">D21-K</option>
+    <option value="D6-C2/D2">D6-C2/D2</option>
+    <option value="D6-C3">D6-C3</option>
+    <option value="G3-G4">G3-G4</option>
+    <option value="G4-G9">G4-G9</option>
+    <option value="G7-G5">G7-G5</option>
+    <option value="D4-C3/E">D4-C3/E</option>
+    <option value="G1-C2/D2">G1-C2/D2</option>
+    <option value="D3-G1">D3-G1</option>
+    <option value="Y1-G6">Y1-G6</option>
+    <option value="D15-G10">D15-G10</option>
+    <option value="D19-K">D19-K</option>
+    <option value="D20-C3">D20-C3</option>
+    <option value="K-G6">K-G6</option>
+    <option value="G8-G1">G8-G1</option>
+    <option value="Z1-J2">Z1-J2</option>
+    <option value="D3-D2">D3-D2</option>
+    <option value="D1/10-C2/D2">D1/10-C2/D2</option>
+    <option value="G5-G3">G5-G3</option>
+    <option value="B6-J1">B6-J1</option>
+    <option value="G8-G9">G8-G9</option>
+    <option value="G10-G5">G10-G5</option>
+  </select>
+</div>
+
+<div class="carddd">
+  <div class="card-inner">
+    <p class="text-primary"><b>Выберите год</b></p>
+    <img class="img" src="../static/calendar.png" alt="Календарь" style="width: 48px; height: 48px; margin-right: -5px;">
+  </div>
+
+  <select class="input" id="data-input" name="data-input">
+    <option value="">Выберите год</option>
+    <option value="2014">2014</option>
+    <option value="2015">2015</option>
+    <option value="2016">2016</option>
+    <option value="2017">2017</option>
+    <option value="2018">2018</option>
+    <option value="2019">2019</option>
+    <option value="2020">2020</option>
+    <option value="2021">2021</option>
+    <option value="2022">2022</option>
+    <option value="2023">2023</option>
+  </select>
+</div>
+
+        <!-- Окно для загрузки первого Excel файла -->
+        <div class="cardd">
+          <div class="card-inner">
+            <p class="text-primary"><b>Загрузите первый Excel файл</b></p>
+            <img class="img" src="../static/excel.png" alt="Excel" style="width: 48px; height: 48px; margin-right: -5px;">
+          </div>
+          <input class="input" type="file" id="file-input-1" name="file-input-1">
+        </div>
+
+        <!-- Окно для загрузки второго Excel файла -->
+        <div class="cardd">
+          <div class="card-inner">
+            <p class="text-primary"><b>Загрузите второй Excel файл</b></p>
+            <img class="img" src="../static/excel.png" alt="Excel" style="width: 48px; height: 48px; margin-right: -5px;">
+          </div>
+          <input class="input" type="file" id="file-input-2" name="file-input-2">
+        </div>
+
+        </div>
+        <div id="buttonDiv">
+          <button type="submit" class="btn" id="runCodeButton">Запустить код</button>
+        </div>
+      </form>
+
+        <div class="main-cards">
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Qн (т/сут):</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="qnOutput" class="text-primary font-weight-bold"><b>{{ result[0] }} </b></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Qг:</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="qgOutput" class="text-primary font-weight-bold"><b>{{ result[1] }} </b></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Qв:</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="qvOutput" class="text-primary font-weight-bold"><b>{{ result[2] }} </b></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>P:</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="pOutput" class="text-primary font-weight-bold"><b>{{ result[3] }} </b></span>
+          </div>
+
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>T:</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="tOutput" class="text-primary font-weight-bold"><b>{{ result[4] }} </b></span>
+          </div>
+
+
+
+         <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Режим течения трубопровода:</b></p>
+              <span class="material-icons-outlined text-blue"></span>
+            </div>
+            <span id="resultOutput" class="text-primary font-weight-bold"><b>{{ result[5] }}  </b></span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Скорость движения жидкой фазы (м/с):</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="speedOutput" class="text-primary font-weight-bold">{{ result[7] }}</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Критическая скорость перехода в расслоенный поток (м/с):</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="criticalSpeedOutput" class="text-primary font-weight-bold">{{ result[8] }}</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Накопленный износ, %:</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="iznosOutput" class="text-primary font-weight-bold">{{ result[9] }}</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Скорость коррозии <br> (мм/год):</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="corossOutput" class="text-primary font-weight-bold">{{ result[12] }}</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Критическая скорость расслоенного потока (м/с):</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="skorostOutput" class="text-primary font-weight-bold">{{ result[10] }}</span>
+          </div>
+
+          <div class="card">
+            <div class="card-inner">
+              <p class="text-primary"><b>Остаточный ресурс (лет):</b></p>
+              <span class="material-icons-outlined text-orange"></span>
+            </div>
+            <span id="residualResourceOutput" class="text-primary font-weight-bold">{{ result[11] }}</span>
+          </div>
+      </div>
+
+        <div>
+            <div class="main-title">
+              <span class="font-weight-bold" style="font-size: 32px; white-space: nowrap;"><b>График:</b></span>
+            </div>
+            {% if plot_url %}
+                <img src="{{ plot_url }}" alt="my plot" width="1000" height="600">
+            {% else %}
+              <p> </p>
+            {% endif %}
+          </div>
+      </main>
+
+
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.35.3/apexcharts.min.js"></script>
+    <!-- Custom JS -->
+    <script src="../static/js/scripts.js"></script>
+  </body>
+</html>
